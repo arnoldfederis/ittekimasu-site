@@ -1,26 +1,241 @@
 @import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
 
+@custom-variant dark (&:is(.dark *));
+
+/*
+ * The palette is the mobile app's, ported from apps/mobile/src/global.css so the site and
+ * the app read as one product: a warm paper canvas, a deep teal primary, an amber accent.
+ *
+ * There is deliberately NO red anywhere, including --destructive. The app runs on positive
+ * reinforcement — an unfinished checklist task is neutral, never a warning — and a red
+ * button on the marketing site would be the first thing to break that promise.
+ *
+ * shadcn's --accent is a hover/active SURFACE, not the brand accent. Amber lives on
+ * --brand-accent instead; putting it on --accent would fill every hover state with it.
+ */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #f5f1e6;
+  --foreground: #1c1b17;
+  --card: #ffffff;
+  --card-foreground: #1c1b17;
+  --popover: #ffffff;
+  --popover-foreground: #1c1b17;
+  --primary: #0f6e56;
+  --primary-foreground: #ffffff;
+  --secondary: #efeadc;
+  --secondary-foreground: #1c1b17;
+  --muted: #efeadc;
+  --muted-foreground: #6b675c;
+  --accent: #e6f0ec;
+  --accent-foreground: #0a5442;
+  /* Amber, not red: the app has no red, and neither does anything describing it. */
+  --destructive: #ef9f27;
+  --border: #e2dccb;
+  --input: #e2dccb;
+  --ring: #0f6e56;
+
+  /* Brand tokens the app also has, which shadcn's set has no slot for. */
+  --brand-primary-pressed: #0a5442;
+  --brand-primary-tint: #e6f0ec;
+  --brand-accent: #ef9f27;
+  --brand-accent-tint: #fdf1dc;
+  --brand-positive: #2f8f5b;
+  --brand-ink-subtle: #9a968a;
+
+  --chart-1: #0f6e56;
+  --chart-2: #2f8f5b;
+  --chart-3: #ef9f27;
+  --chart-4: #0a5442;
+  --chart-5: #9a968a;
+  --radius: 1rem;
+  --sidebar: #ffffff;
+  --sidebar-foreground: #1c1b17;
+  --sidebar-primary: #0f6e56;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #efeadc;
+  --sidebar-accent-foreground: #1c1b17;
+  --sidebar-border: #e2dccb;
+  --sidebar-ring: #0f6e56;
+
+  /*
+   * Teal → amber, the two brand colours and nothing else. Used for the display headings and
+   * the carousel; every gradient on the site points at these two variables rather than
+   * repeating hex codes down eight components.
+   */
+  --brand-gradient: linear-gradient(
+    to right,
+    #0f6e56 0%,
+    #2f8f5b 45%,
+    #ef9f27 100%
+  );
+  --carousel-section-bg: linear-gradient(
+    180deg,
+    rgba(245, 241, 230, 0.92) 0%,
+    rgba(230, 240, 236, 0.88) 48%,
+    rgba(253, 241, 220, 0.92) 100%
+  );
+  --carousel-panel-bg: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.9) 0%,
+    rgba(239, 234, 220, 0.86) 52%,
+    rgba(230, 240, 236, 0.9) 100%
+  );
+}
+
+/*
+ * Warm near-blacks rather than pure grey, so dark mode stays in the same family as the
+ * paper canvas. Teal is lifted here or it stops reading as the brand colour.
+ */
+.dark {
+  --background: #14130f;
+  --foreground: #f2eee3;
+  --card: #1e1c17;
+  --card-foreground: #f2eee3;
+  --popover: #1e1c17;
+  --popover-foreground: #f2eee3;
+  --primary: #1e8f70;
+  --primary-foreground: #0b1512;
+  --secondary: #2a2721;
+  --secondary-foreground: #f2eee3;
+  --muted: #2a2721;
+  --muted-foreground: #a9a395;
+  --accent: #16302a;
+  --accent-foreground: #f2eee3;
+  --destructive: #f2ac46;
+  --border: #33302a;
+  --input: #33302a;
+  --ring: #1e8f70;
+
+  --brand-primary-pressed: #17755b;
+  --brand-primary-tint: #16302a;
+  --brand-accent: #f2ac46;
+  --brand-accent-tint: #33281a;
+  --brand-positive: #4cb07e;
+  --brand-ink-subtle: #7c7669;
+
+  --chart-1: #1e8f70;
+  --chart-2: #4cb07e;
+  --chart-3: #f2ac46;
+  --chart-4: #17755b;
+  --chart-5: #7c7669;
+  --sidebar: #1e1c17;
+  --sidebar-foreground: #f2eee3;
+  --sidebar-primary: #1e8f70;
+  --sidebar-primary-foreground: #0b1512;
+  --sidebar-accent: #2a2721;
+  --sidebar-accent-foreground: #f2eee3;
+  --sidebar-border: #33302a;
+  --sidebar-ring: #1e8f70;
+
+  --brand-gradient: linear-gradient(
+    to right,
+    #4cb07e 0%,
+    #1e8f70 45%,
+    #f2ac46 100%
+  );
+  --carousel-section-bg: linear-gradient(
+    180deg,
+    rgba(20, 19, 15, 0.98) 0%,
+    rgba(22, 48, 42, 0.9) 48%,
+    rgba(30, 28, 23, 0.96) 100%
+  );
+  --carousel-panel-bg: linear-gradient(
+    180deg,
+    rgba(30, 28, 23, 0.92) 0%,
+    rgba(22, 48, 42, 0.86) 52%,
+    rgba(42, 39, 33, 0.9) 100%
+  );
 }
 
 @theme inline {
-  --color-background: var(--background);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-background: var(--background);
+
+  /* Brand utilities: text-brand-accent, bg-brand-accent-tint, text-brand-positive. */
+  --color-brand-primary-pressed: var(--brand-primary-pressed);
+  --color-brand-primary-tint: var(--brand-primary-tint);
+  --color-brand-accent: var(--brand-accent);
+  --color-brand-accent-tint: var(--brand-accent-tint);
+  --color-brand-positive: var(--brand-positive);
+  --color-brand-ink-subtle: var(--brand-ink-subtle);
+
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-3xl: calc(var(--radius) + 12px);
+  --radius-4xl: calc(var(--radius) + 16px);
+  --font-heading: var(--font-sans);
+  --font-sans: var(--font-inter);
+  --font-jp: var(--font-noto-sans-jp);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply font-sans bg-background text-foreground;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  html {
+    @apply font-sans scroll-smooth;
+  }
+  ::selection {
+    @apply bg-primary/20 text-foreground;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@layer utilities {
+  /*
+   * One definition for the brand gradient text. It was previously copied inline into eight
+   * components, which is how a palette change turns into a hunt.
+   */
+  .text-brand-gradient {
+    background-image: var(--brand-gradient);
+    background-clip: text;
+    color: transparent;
+  }
+
+  .bg-brand-gradient {
+    background-image: var(--brand-gradient);
+  }
+
+  /* Japanese glyphs on the site (行ってきます, the kana cards) want the JP face. */
+  .font-jp {
+    font-family: var(--font-jp), var(--font-sans), sans-serif;
+  }
 }

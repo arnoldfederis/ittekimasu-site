@@ -1,36 +1,37 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# ittekimasu-site
 
-## Getting Started
+Marketing and legal site for **Ittekimasu**, the Japan relocation checklist + Japanese spaced-repetition iPhone app. Next.js 16 (App Router, Turbopack), Tailwind v4, shadcn, Bun.
 
-First, run the development server:
+The iOS app links here for its Privacy Policy and Terms of Use — `LEGAL_BASE_URL` in `apps/mobile/src/app/settings.tsx` is `https://ittekimasu.app`. **Those two pages must be live before the app can be submitted**; App Store Connect requires a reachable privacy URL.
+
+## Commands
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+bun run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+```bash
+bun run build
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+`bun run check-types` typechecks.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Content lives in one place
 
-## Learn More
+`lib/seo.ts` holds the product name, tagline, support email, App Store URL, keywords, footer links and the full FAQ list. The home page renders the first six questions and builds its `FAQPage` JSON-LD from the same array; `/contact` renders all of them. Editing copy there rather than in a component is what keeps the answer Google is shown and the answer on the page identical.
 
-To learn more about Next.js, take a look at the following resources:
+## Theme
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+`app/globals.css` carries the mobile app's palette verbatim — warm paper canvas, deep teal primary, amber accent, and **no red anywhere**, including `--destructive`. The app runs on positive reinforcement, so a red control here would be the first thing to break that promise. Change a colour in `apps/mobile/src/global.css` and it has to be changed here too.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Two utilities do the brand work: `.text-brand-gradient` and `.bg-brand-gradient`, both driven by `--brand-gradient`. Use them instead of writing a gradient inline — the previous version of this site had the same gradient copied into eight components.
 
-## Deploy on Vercel
+`app/opengraph-image.tsx` is the exception: Satori resolves no CSS variables, so its colours are literals and have to be updated by hand alongside the palette.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Images
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Screenshots live in `public/assets/device-*.png` and the icons use neutral filenames (`icon.png`, `site-image-512x512.png`, `favicon*`, `android-chrome-*`) so the artwork can be swapped without touching code. The carousel checks whether each file exists and renders a styled placeholder for the ones that do not.
+
+## Known gap
+
+`package.json` runs `bunx biome`, but `@biomejs/biome` is not a dependency — `bunx` resolves an unrelated `biome` package that exits 0 without checking anything, so `bun lint`, `bun run format` and `bun run pre:push` currently do nothing. Add `@biomejs/biome` (the config targets schema 2.4.2) to fix it.
