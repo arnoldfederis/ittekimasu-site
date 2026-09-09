@@ -181,7 +181,13 @@ export default function PrivacyPage() {
       <Section title="Children">
         <Body>
           Ittekimasu is not directed at children under 13 and does not knowingly
-          collect information from them.
+          collect information from them. The Terms of Use require you to be at
+          least 13 to hold an account.
+        </Body>
+        <Body>
+          If you believe a child under 13 has created an account, email{" "}
+          {SUPPORT_EMAIL} and we will delete the account and everything stored
+          with it.
         </Body>
       </Section>
 

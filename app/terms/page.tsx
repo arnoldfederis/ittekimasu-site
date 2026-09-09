@@ -95,6 +95,28 @@ export default function TermsPage() {
         </Body>
       </Section>
 
+      {/*
+        A minimum age is a GDPR requirement, not an App Store one: signing in creates an
+        account holding an email address, a name and a device identifier, and consent to
+        process that from a child needs a parent's authorisation. It does not affect the
+        App Store age rating, which measures CONTENT — Ittekimasu is rated 4+ and stays
+        there. Plenty of 4+ apps require 13+ to hold an account.
+      */}
+      <Section title="Who Can Use Ittekimasu">
+        <Body>
+          You must be at least 13 years old to use Ittekimasu. If you are under
+          the age of majority where you live, you may only use it with the
+          permission of a parent or guardian, who accepts these terms on your
+          behalf.
+        </Body>
+        <Body>
+          Ittekimasu is not directed at children, and we do not knowingly create
+          accounts for anyone under 13. If you believe a child has created one,
+          email {SUPPORT_EMAIL} and we will delete it and everything held with
+          it.
+        </Body>
+      </Section>
+
       <Section title="Your Account">
         <Body>
           You sign in with Apple or Google. You are responsible for keeping that
@@ -130,7 +152,29 @@ export default function TermsPage() {
       <Section title="Subscriptions and Ittekimasu Pro">
         <Body>
           Ittekimasu Pro unlocks the JLPT N4, JLPT N3 and Ward Office decks and
-          removes the daily review limit.
+          removes the daily review limit. New cards are still introduced at a
+          steady pace on Pro — 10 per deck a day, 30 across all of them — which
+          is how spaced repetition works; what Pro removes is the cap on
+          reviewing cards you have already met.
+        </Body>
+        {/*
+          App Review guideline 3.1.2 requires the paywall to link to the Terms of Use that
+          govern the purchase. The app links here, but the purchase itself is made under
+          Apple's Standard EULA — so this page has to acknowledge it, or the two documents
+          simply do not refer to each other.
+        */}
+        <Body>
+          Purchases made on iOS are also governed by Apple&apos;s{" "}
+          <a
+            className="text-primary underline underline-offset-3 hover:text-primary/80"
+            href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            Standard End User License Agreement
+          </a>
+          . Where that agreement and these terms conflict on matters of the App
+          Store transaction, Apple&apos;s terms apply.
         </Body>
         <BulletList
           items={[
