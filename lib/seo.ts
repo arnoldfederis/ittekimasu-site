@@ -87,7 +87,7 @@ export const FAQ_ITEMS = [
   {
     question: "What does Ittekimasu Pro add?",
     answer:
-      "Ittekimasu Pro unlocks the JLPT N4, JLPT N3 and Ward Office decks and removes the 20-reviews-a-day limit. It is $4.99 a month or $29.99 a year in the US — the App Store shows your own local price, tax included where that applies. Both start with a 7-day free trial, which becomes a paid subscription unless you cancel before it ends.",
+      "Ittekimasu Pro unlocks the JLPT N4, JLPT N3 and Ward Office decks and removes the 20-reviews-a-day limit. New cards are still introduced at a steady pace on Pro — 10 per deck a day, 30 across all of them — because that is what spaced repetition is; the limit Pro removes is on reviewing cards you have already met. It is $4.99 a month or $29.99 a year in the US — the App Store shows your own local price, tax included where that applies. Both start with a 7-day free trial, which becomes a paid subscription unless you cancel before it ends.",
   },
   {
     question: "Is the checklist official immigration advice?",
@@ -97,7 +97,7 @@ export const FAQ_ITEMS = [
   {
     question: "Which visa routes are covered?",
     answer:
-      "The checklist ships for the Engineer / Specialist in Humanities / International Services route (技術・人文知識・国際業務), which is the usual one for a software engineer hired by a Japanese company. Working Holiday and Instructor are listed in the app and marked coming soon. Everything else — the kana chart, the decks, streaks and reminders — works whatever route you are on.",
+      "The checklist ships for the Engineer / Specialist in Humanities / International Services route (技術・人文知識・国際業務), which is the usual one for a software engineer hired by a Japanese company. Six more are listed in the app and marked coming soon: Working Holiday, Instructor, Student, Spouse or Child of a Japanese National, Dependent, and Digital Nomad. Everything else — the kana chart, the decks, streaks and reminders — works whatever route you are on.",
   },
   {
     question: "Do I have to be moving to Japan to use it?",
@@ -117,7 +117,7 @@ export const FAQ_ITEMS = [
   {
     question: "How does the daily review work?",
     answer:
-      "Each card is scheduled by the SM-2 spaced repetition algorithm: the better you know a card, the further out it goes. Cards that are due come back first, and each deck introduces at most 10 brand-new cards a day (30 across all your decks) so a 100-card deck is not exhausted in one sitting.",
+      "Each card is scheduled by the SM-2 spaced repetition algorithm: the better you know a card, the further out it goes. Cards that are due come back first, and each deck introduces at most 10 brand-new cards a day — 30 across all your decks, on the free plan and on Pro alike — so a 100-card deck is not exhausted in one sitting. Reviews of cards you have already met are what the free plan caps at 20 a day and Pro does not cap at all.",
   },
   {
     question: "Does a day with nothing due break my streak?",

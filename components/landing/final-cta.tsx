@@ -16,8 +16,14 @@ export function FinalCTA() {
         <AppStoreBadge className="h-14" />
 
         <p className="mt-5 text-muted-foreground text-sm">
-          Free to start. Pro adds N4, N3 and the ward office, with no cap on
-          daily reviews.
+          {/*
+            "No daily review limit", not "no cap on daily reviews". The looser phrasing
+            reads as "nothing is metered", and new cards are still paced at 10 a deck and
+            30 a day on Pro — deliberately, because that is what spaced repetition is. What
+            Pro removes is the 20-a-day cap on reviewing cards you have already met.
+          */}
+          Free to start. Pro adds N4, N3 and the ward office, with no daily
+          review limit.
         </p>
       </FadeIn>
     </section>
