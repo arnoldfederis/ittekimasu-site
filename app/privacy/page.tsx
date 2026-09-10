@@ -168,13 +168,36 @@ export default function PrivacyPage() {
 
       <Section title="Deleting Your Data">
         <Body>
-          You can delete your account from Settings inside the app. Deleting
-          your account removes your checklist, your card progress, your streak,
-          your study history, and your reminder settings from the Ittekimasu
-          database. Purchase records held by Apple and RevenueCat are outside
-          our control and are handled under their own policies. You can also
-          reset your learning progress on its own, from Settings, without
-          deleting your account.
+          You can delete your account from Settings inside the app. It takes
+          effect immediately and there is no waiting period.
+        </Body>
+        <Body>Deleting your account removes:</Body>
+        <BulletList
+          items={[
+            "Your checklist, card progress, streak, study history and reminder settings, from the Ittekimasu database",
+            "Your sign-in record with Google Firebase, including the email address and name it held — so signing in again creates a genuinely new account",
+            "Your notification record with OneSignal, including the device token used to deliver reminders",
+          ]}
+        />
+        {/*
+          Retaining anything after an erasure request has to be stated, and the reason has to
+          be a real one. This is the honest version: the record is kept because Apple requires
+          purchases to remain restorable and because someone may still be billed after
+          deleting the account — not because it is convenient to keep.
+        */}
+        <Body>
+          One thing is deliberately kept: the record of your subscription held
+          by Apple and RevenueCat. Apple requires purchases to remain
+          restorable, and a subscription continues to bill until it is cancelled
+          through Apple — so that record has to outlive the account, or a
+          payment would exist with nothing tying it to anything. It holds no
+          study data. Cancel from iPhone Settings, then your Apple Account, then
+          Subscriptions.
+        </Body>
+        <Body>
+          Crash reports carry no account identifier, so there is nothing in them
+          to attach to you or to delete. You can also reset your learning
+          progress on its own, from Settings, without deleting your account.
         </Body>
       </Section>
 

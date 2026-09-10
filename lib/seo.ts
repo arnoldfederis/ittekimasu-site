@@ -142,7 +142,7 @@ export const FAQ_ITEMS = [
   {
     question: "Can I delete my account?",
     answer:
-      "Yes, from Settings inside the app. Deleting your account removes your checklist, your card progress, your streak and your study history from our database.",
+      "Yes, from Settings inside the app, and it takes effect immediately. It removes your checklist, card progress, streak, study history and reminder settings from our database, your sign-in record with Firebase, and your notification record with OneSignal — so signing in again creates a genuinely new account. The record of your subscription held by Apple and RevenueCat is kept, because Apple requires purchases to stay restorable and a subscription keeps billing until you cancel it through Apple.",
   },
   {
     question: "How do I cancel Ittekimasu Pro?",

@@ -121,8 +121,21 @@ export default function TermsPage() {
         <Body>
           You sign in with Apple or Google. You are responsible for keeping that
           account secure — anyone who can sign in as you can see your checklist
-          and your progress. You can delete your account, and everything the
-          server holds for it, from Settings inside the app.
+          and your progress. You can delete your account from Settings inside
+          the app, at any time and without asking us.
+        </Body>
+        {/*
+          "everything the server holds for it" was too broad once deletion started reaching
+          Firebase and OneSignal but deliberately NOT RevenueCat. The Privacy Policy carries
+          the itemised version; this points at it rather than repeating a list that would
+          then have two places to drift.
+        */}
+        <Body>
+          Deleting removes your study data, your sign-in record and your
+          notification record. Your subscription is billed by Apple and is not
+          cancelled by deleting your account — cancel it separately in iPhone
+          Settings, under your Apple Account, then Subscriptions. The Privacy
+          Policy sets out exactly what is deleted and what is kept.
         </Body>
       </Section>
 
