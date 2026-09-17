@@ -1,7 +1,10 @@
 # Which screenshot goes where
 
-Fourteen slots, all under `public/assets/`, all referenced by filename from code. Drop a file
+Sixteen slots, all under `public/assets/`, all referenced by filename from code. Drop a file
 in with the right name and the page picks it up — no code change.
+
+Numbering is not contiguous: `device-15.png` is parked here for ASO and belongs to no slot on
+this site. Take 18 for the next one.
 
 **These are NOT the App Store screenshots.** The store wants 1290×2796 with no device frame;
 this site wants a **framed device mockup** at roughly **1419×2796**, because the page renders
@@ -30,8 +33,9 @@ empty state, not a broken image.
 | `device-12.png` | Carousel, "Reminders" | **Reminder time** picker | An hour selected, and enough of the 24-hour list in frame that it reads as a full day |
 | `device-13.png` | Carousel, "Plan status" | **Profile**, plan card | Free plan card with the daily limit and Upgrade — or the Pro card if you'd rather show the paid state |
 | `device-14.png` | Carousel, "Setup" | **Onboarding**, visa route step | The route options, including the "coming soon" ones |
-| `device-15.png` | Carousel, "Stroke order" | **Kana chart ▸ tap a character**, stroke order toggled on (the hand icon in the sheet header) | A character with several strokes so the numbering is the point — ぬ, な or あ. Every number must be legible against the stroke it sits on; that is the whole feature |
-| `device-16.png` | Carousel, "Practice" | **Kana chart ▸ Practice** (navigation bar), mid-selection | Row handles and a section's Select all visible, several cells ticked, and the pinned count button at the bottom. Shoot the PICKER, not the shuffled card — choosing off the chart is the part nothing else does |
+| `device-15.png` | **Nothing on this site** — reserved for ASO | — | Parked here so the App Store asset lives beside the others. No code references it, and nothing should start: the next site slot is 18 |
+| `device-16.png` | Carousel, "Stroke order" | **Kana chart ▸ tap a character**, stroke order toggled on (the hand icon in the sheet header) | A character with several strokes so the numbering is the point — ぬ, な or あ. Every number must be legible against the stroke it sits on; that is the whole feature |
+| `device-17.png` | Carousel, "Practice" | **Kana chart ▸ Practice** (navigation bar), mid-selection | Row handles and a section's Select all visible, several cells ticked, and the pinned count button at the bottom. Shoot the PICKER, not the shuffled card — choosing off the chart is the part nothing else does |
 
 ## Order to shoot in
 

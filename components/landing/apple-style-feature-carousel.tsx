@@ -97,7 +97,7 @@ const carouselItems: CarouselFeatureItem[] = [
     eyebrow: "How it is written",
     heading: "Every stroke, numbered in order.",
     body: "Tap any kana and see the character drawn stroke by stroke, each one numbered where it begins — and the same for the kanji on a vocabulary card. A numbered diagram rather than an animation, because you came to check something, not to wait for it.",
-    imageSrc: "/assets/device-15.png",
+    imageSrc: "/assets/device-16.png",
     imageAlt:
       "Ittekimasu kana sheet showing a character with each stroke numbered in writing order",
   },
@@ -106,7 +106,7 @@ const carouselItems: CarouselFeatureItem[] = [
     eyebrow: "The ones you keep missing",
     heading: "Drill the characters you choose.",
     body: "Pick characters straight off the chart — a row, a whole section, or a handful across both scripts — and shuffle them. The reading stays hidden until you tap, nothing is scored, and none of it spends a review.",
-    imageSrc: "/assets/device-16.png",
+    imageSrc: "/assets/device-17.png",
     imageAlt:
       "Ittekimasu kana chart in picking mode with characters selected and a practice button",
   },
