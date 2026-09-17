@@ -155,10 +155,12 @@ export default function TermsPage() {
       <Section title="Free Plan">
         <Body>
           The free plan includes the complete checklist for your visa route, the
-          Hiragana, Katakana and JLPT N5 decks, twenty reviews a day, streaks,
-          and the daily reminder. New cards are introduced at a limited rate for
-          everyone, free and paid alike — that is pacing, not a paywall. Free
-          features may change over time.
+          full kana chart, the JLPT N5 deck, twenty reviews a day, streaks, and
+          the daily reminder. The kana chart is unmetered — it is a reference
+          rather than a deck, so reading it spends none of your daily reviews.
+          New cards are introduced at a limited rate for everyone, free and paid
+          alike — that is pacing, not a paywall. Free features may change over
+          time.
         </Body>
       </Section>
 

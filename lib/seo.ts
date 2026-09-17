@@ -112,7 +112,7 @@ export const FAQ_ITEMS = [
   {
     question: "I can't read kana yet. Can I still use it?",
     answer:
-      "Yes — that is the case it is built for. Readings are shown in romaji by default, so a card reads otoko · man rather than おとこ · man and the kana chart is labelled throughout. When you no longer need it, one switch in Settings turns romaji off everywhere and the same screens become a self-test. Audio always plays the Japanese either way, and the type can be sized up if the characters are hard to make out.",
+      "Yes — that is the case it is built for. Vocabulary cards show their readings in romaji by default, so a card reads otoko · man rather than おとこ · man, and the kana chart is labelled throughout. The cog in a review session turns romaji off when you no longer need it, and sizes the type up if the characters are hard to make out — both sit on the card they change rather than in a settings screen. On the kana chart, browsing always shows the reading and practice always hides it until you tap, so that side needs no switch at all. Audio plays the Japanese whichever way it is set.",
   },
   {
     question: "How does the daily review work?",
