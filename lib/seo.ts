@@ -41,6 +41,10 @@ export const KEYWORDS = [
   "hiragana flashcards",
   "katakana flashcards",
   "learn hiragana and katakana",
+  "kana stroke order",
+  "kanji stroke order app",
+  "how to write hiragana",
+  "hiragana practice quiz",
   "learn Japanese with romaji",
   "Japanese flashcards romaji",
   "spaced repetition Japanese",
@@ -107,7 +111,7 @@ export const FAQ_ITEMS = [
   {
     question: "Which Japanese does it teach?",
     answer:
-      "Both kana syllabaries as a chart you tap through and hear — 104 characters each, free and unmetered — plus JLPT N5, N4 and N3 vocabulary decks and a Ward Office deck of the words that come up when you register your address, enrol in health insurance, or open a bank account.",
+      "Both kana syllabaries as a chart you tap through and hear — 104 characters each, free and unmetered, with stroke order on any character and a practice mode you build by picking off the chart — plus JLPT N5, N4 and N3 vocabulary decks and a Ward Office deck of the words that come up when you register your address, enrol in health insurance, or open a bank account. Vocabulary cards show kanji stroke order too.",
   },
   {
     question: "I can't read kana yet. Can I still use it?",

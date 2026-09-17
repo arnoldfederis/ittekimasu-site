@@ -30,6 +30,8 @@ empty state, not a broken image.
 | `device-12.png` | Carousel, "Reminders" | **Reminder time** picker | An hour selected, and enough of the 24-hour list in frame that it reads as a full day |
 | `device-13.png` | Carousel, "Plan status" | **Profile**, plan card | Free plan card with the daily limit and Upgrade — or the Pro card if you'd rather show the paid state |
 | `device-14.png` | Carousel, "Setup" | **Onboarding**, visa route step | The route options, including the "coming soon" ones |
+| `device-15.png` | Carousel, "Stroke order" | **Kana chart ▸ tap a character**, stroke order toggled on (the hand icon in the sheet header) | A character with several strokes so the numbering is the point — ぬ, な or あ. Every number must be legible against the stroke it sits on; that is the whole feature |
+| `device-16.png` | Carousel, "Practice" | **Kana chart ▸ Practice** (navigation bar), mid-selection | Row handles and a section's Select all visible, several cells ticked, and the pinned count button at the bottom. Shoot the PICKER, not the shuffled card — choosing off the chart is the part nothing else does |
 
 ## Order to shoot in
 
