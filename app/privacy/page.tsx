@@ -135,7 +135,10 @@ export default function PrivacyPage() {
           Ittekimasu asks for notification permission only after you have
           finished a review session, never on first launch. If you allow it, the
           daily reminder defaults to 8pm in your timezone and can be changed or
-          switched off at any time from your profile. Turning notifications off
+          switched off at any time from your profile. On a day when a task on
+          your checklist is due tomorrow or in three days, that day's
+          reminder names the task instead — it is still one reminder a day,
+          never an extra one. Turning notifications off
           in iOS Settings stops them regardless of what the app is set to.
         </Body>
       </Section>

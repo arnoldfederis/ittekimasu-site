@@ -70,7 +70,7 @@ const carouselItems: CarouselFeatureItem[] = [
     altName: "Reminders",
     eyebrow: "One nudge",
     heading: "A reminder at your hour, not ours.",
-    body: "Pick any hour of the day, in your own timezone — half these users are not in Japan yet, and a night shift is still a schedule. It is skipped entirely on days you already studied or have nothing due.",
+    body: "Pick any hour of the day, in your own timezone — half these users are not in Japan yet, and a night shift is still a schedule. When a checklist task is due tomorrow or in three days, that day's nudge names it instead of your cards. On days with nothing worth saying — you already studied, nothing is due, no deadline is close — it is skipped entirely.",
     imageSrc: "/assets/device-12.png",
     imageAlt: "Ittekimasu reminder time picker showing every hour of the day and Off",
   },
