@@ -51,7 +51,7 @@ function BulletList({ items }: { items: string[] }) {
 export default function TermsPage() {
   return (
     <LegalPageShell
-      effectiveDate="Effective date: August 28, 2026"
+      effectiveDate="Effective date: September 29, 2026"
       intro="These Terms of Use explain how you may use Ittekimasu, an iPhone app that plans a move to Japan and teaches Japanese with spaced repetition."
       title="Terms of Use"
     >
@@ -155,9 +155,10 @@ export default function TermsPage() {
       <Section title="Free Plan">
         <Body>
           The free plan includes the complete checklist for your visa route, the
-          full kana chart, the JLPT N5 deck, twenty reviews a day, streaks, and
-          the daily reminder. The kana chart is unmetered — it is a reference
-          rather than a deck, so reading it spends none of your daily reviews.
+          full kana chart and kana quiz, the JLPT N5 deck, twenty reviews a day,
+          streaks, and the daily reminder. Kana is unmetered — it is a reference
+          rather than a deck, so reading it or quizzing yourself on it spends
+          none of your daily reviews.
           New cards are introduced at a limited rate for everyone, free and paid
           alike — that is pacing, not a paywall. Free features may change over
           time.

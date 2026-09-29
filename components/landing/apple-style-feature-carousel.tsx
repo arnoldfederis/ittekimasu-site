@@ -105,7 +105,7 @@ const carouselItems: CarouselFeatureItem[] = [
     altName: "Practice",
     eyebrow: "The ones you keep missing",
     heading: "Drill the characters you choose.",
-    body: "Pick characters straight off the chart — a row, a whole section, or a handful across both scripts — and shuffle them. The reading stays hidden until you tap, nothing is scored, and none of it spends a review.",
+    body: "Pick characters straight off the chart — a row, a whole section, or a handful across both scripts — and quiz yourself: choose the reading from four, or type it. Every answer plays the sound, the chart counts what you get right, and none of it spends a review.",
     imageSrc: "/assets/device-17.png",
     imageAlt:
       "Ittekimasu kana chart in picking mode with characters selected and a practice button",

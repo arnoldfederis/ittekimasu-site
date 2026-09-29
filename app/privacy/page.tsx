@@ -47,7 +47,7 @@ function BulletList({ items }: { items: string[] }) {
 export default function PrivacyPage() {
   return (
     <LegalPageShell
-      effectiveDate="Effective date: August 28, 2026"
+      effectiveDate="Effective date: September 29, 2026"
       intro="This Privacy Policy explains what Ittekimasu stores about you, where it is stored, and who else touches it. Unlike a purely on-device app, Ittekimasu keeps your checklist and your study progress on a server so they survive a new phone — so this page is specific about what that means."
       title="Privacy Policy"
     >
@@ -80,6 +80,7 @@ export default function PrivacyPage() {
             "Your study streak, longest streak, and the dates you studied with a count of reviews for each",
             "Your reminder hour and timezone, if you turn reminders on",
             "Your subscription status for Ittekimasu Pro",
+            "If you subscribe to Pro, a backup of your kana quiz progress: for each character, how many times you have answered it, how many of those were right, and the total time taken",
           ]}
         />
         <Body>
@@ -94,7 +95,9 @@ export default function PrivacyPage() {
         <Body>
           So that the app works on a plane or an underground train, your decks
           and recent responses are cached on the device, and answers given
-          offline are queued locally until a connection returns. Card audio uses
+          offline are queued locally until a connection returns. Your kana quiz
+          progress is kept on the device for everyone, and only leaves it as the
+          Pro backup described above. Card audio uses
           the Japanese voices already installed in iOS; nothing about
           text-to-speech is sent to a server.
         </Body>
@@ -174,7 +177,7 @@ export default function PrivacyPage() {
         <Body>Deleting your account removes:</Body>
         <BulletList
           items={[
-            "Your checklist, card progress, streak, study history and reminder settings, from the Ittekimasu database",
+            "Your checklist, card progress, kana quiz progress, streak, study history and reminder settings, from the Ittekimasu database, and the kana quiz progress kept on your phone",
             "Your sign-in record with Google Firebase, including the email address and name it held — so signing in again creates a genuinely new account",
             "Your notification record with OneSignal, including the device token used to deliver reminders",
           ]}

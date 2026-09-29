@@ -18,7 +18,7 @@ const SHOWCASES = [
     id: "decks",
     eyebrow: "Start where you are",
     headline: "Kana first, because that is the real wall.",
-    body: "Both kana syllabaries are a chart, not a deck — tap any of the 104 characters to hear it, free and with nothing counted against you. Then JLPT N5, N4 and N3 vocabulary, where the front of the card is the word as written and the back is the reading and the meaning, so you recall how to say it and not just what it means. Readings start in romaji and switch to kana the day you would rather be tested.",
+    body: "Both kana syllabaries are a chart, not a deck — tap any of the 107 characters to hear it, free and with nothing counted against you. Then JLPT N5, N4 and N3 vocabulary, where the front of the card is the word as written and the back is the reading and the meaning, so you recall how to say it and not just what it means. Readings start in romaji and switch to kana the day you would rather be tested.",
     phoneFirst: true,
     muted: true,
     src: "/assets/device-3.png",

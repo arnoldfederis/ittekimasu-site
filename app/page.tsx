@@ -52,7 +52,8 @@ const jsonLd = {
       },
       featureList: [
         "Relocation checklist dated to your visa route and move date",
-        "Hiragana and katakana charts with audio, 104 characters each",
+        "Hiragana and katakana charts with audio, 107 characters each",
+        "Kana quiz built from the chart, with progress on every character",
         "JLPT N5, N4 and N3 vocabulary decks",
         "Ward Office Japanese vocabulary deck",
         "SM-2 spaced repetition with due-first sessions",

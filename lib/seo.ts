@@ -86,7 +86,7 @@ export const FAQ_ITEMS = [
   {
     question: "Is Ittekimasu free?",
     answer:
-      "Yes. The free plan includes the complete checklist for your visa route, the full kana chart, the JLPT N5 deck, 20 reviews a day, streaks, and the daily reminder. The kana chart is unmetered — it is a reference, not a deck, so reading it costs none of your daily reviews.",
+      "Yes. The free plan includes the complete checklist for your visa route, the full kana chart and kana quiz, the JLPT N5 deck, 20 reviews a day, streaks, and the daily reminder. Kana is unmetered — it is a chart, not a deck, so reading it or quizzing yourself on it costs none of your daily reviews, and your quiz progress is saved on your phone.",
   },
   {
     question: "What does Ittekimasu Pro add?",
@@ -111,12 +111,12 @@ export const FAQ_ITEMS = [
   {
     question: "Which Japanese does it teach?",
     answer:
-      "Both kana syllabaries as a chart you tap through and hear — 104 characters each, free and unmetered, with stroke order on any character and a practice mode you build by picking off the chart — plus JLPT N5, N4 and N3 vocabulary decks and a Ward Office deck of the words that come up when you register your address, enrol in health insurance, or open a bank account. Vocabulary cards show kanji stroke order too.",
+      "Both kana syllabaries as a chart you tap through and hear — 107 characters each, free and unmetered, with stroke order on any character and a quiz you build by picking off the chart — plus JLPT N5, N4 and N3 vocabulary decks and a Ward Office deck of the words that come up when you register your address, enrol in health insurance, or open a bank account. Vocabulary cards show kanji stroke order too.",
   },
   {
     question: "I can't read kana yet. Can I still use it?",
     answer:
-      "Yes — that is the case it is built for. Vocabulary cards show their readings in romaji by default, so a card reads otoko · man rather than おとこ · man, and the kana chart is labelled throughout. The cog in a review session turns romaji off when you no longer need it, and sizes the type up if the characters are hard to make out — both sit on the card they change rather than in a settings screen. On the kana chart, browsing always shows the reading and practice always hides it until you tap, so that side needs no switch at all. Audio plays the Japanese whichever way it is set.",
+      "Yes — that is the case it is built for. Vocabulary cards show their readings in romaji by default, so a card reads otoko · man rather than おとこ · man, and the kana chart is labelled throughout. The cog in a review session turns romaji off when you no longer need it, and sizes the type up if the characters are hard to make out — both sit on the card they change rather than in a settings screen. On the kana chart, browsing always shows the reading and the quiz always asks for it, so that side needs no switch at all. Audio plays the Japanese whichever way it is set.",
   },
   {
     question: "How does the daily review work?",
